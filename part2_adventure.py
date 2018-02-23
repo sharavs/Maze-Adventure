@@ -16,8 +16,19 @@ def load_map(filename):
     in which map data is located. Remember, you have to open the
     file with this filename first before you can read it.
     '''
- #   f = open(filename,"r")
-    pass
+    f = open("map.txt")
+    mapp = []
+    for line in f:
+        if not line.startswith("!"):
+            fields = line.strip().split(" ")
+            mapp.append(fields)
+    return mapp
+    f.close()
+    
+    
+ 
+        
+ 
 
 def generate_map(map_data, p_x, p_y, player_id):
     '''
@@ -50,6 +61,7 @@ def generate_map(map_data, p_x, p_y, player_id):
 
     map_visual = []
     map_coors = {}
+    
 
     ###
     # YOUR CODE HERE #
