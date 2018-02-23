@@ -1,0 +1,48 @@
+
+NOTE: YOU SHOULD ONLY BE WORKING ON THIS PART IF YOU'RE ENROLLED IN
+LECTURE SECTION 2 FROM 6-7PM! DOUBLE-CHECK ACORN TO MAKE SURE.
+
+======= PROCESS LOG =======
+Name:
+UtorID:
+Student Number:
+
+This file is where you will tell us details about the process you
+went through in creating your project.
+
+You have two options for the format (you can also mix and match the two) –
+
+(1)
+A day-to-day journal format.
+
+e.g.
+On Friday, I tried to add [this feature].
+I looked at [this website], which was helpful.
+I managed to almost finish adding it, but [this went wrong].
+I wanted to add it because [...], but decided not to in the end, because [...].
+If I had more time, I would [...]
+
+OR
+
+(2)
+Instead of dividing it up by days, you can divide it up
+by each feature.
+
+e.g.
+Feature 1: Time limit
+I tried to add this by [...]. What worked well was [...]
+What didn't work the way I wanted it to was [...]
+How it is used in the game: [...]
+
+Feature 2: New items
+I tried to add this by [...]. What worked well was [...]
+What didn't work the way I wanted it to was [...]
+How it is used in the game: [...]
+===========================
+
+YOUR LOG STARTS HERE
+
+
+
+
+
