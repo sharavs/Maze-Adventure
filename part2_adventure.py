@@ -59,13 +59,21 @@ def generate_map(map_data, p_x, p_y, player_id):
     {(0, 0): 1, (0, 1): 3, (1, 0): 2, (1, 1): -1, (2, 0): -2, (2, 1): 4}
     '''
 
-    map_visual = []
+    map_visual = map_data[:]
     map_coors = {}
+    list_str = '()'
+    player_name = list_str[0] + player_id + list_str[1]
     
-
-    ###
-    # YOUR CODE HERE #
-    ###
+    for i in range(len(map_visual)):
+        for x in range(len(map_visual[i])):
+                map_coors[(x,i)] = int(map_visual[i][x])
+                if map_visual[i][x] == '-2':
+                   map_visual[i][x] = '(x)'
+                else:
+                   map_visual[i][x] = '(_)'
+                   
+    map_visual[p_y][p_x] = player_name
+                   
     
     return map_visual, map_coors
 
@@ -78,14 +86,16 @@ def load_items(filename):
     as described in the assignment handout, Part 2 Section III.
     '''
 
-    # YOUR CODE HERE #
-    pass
+ #   d = {}
+ #   {t[0]:t[1:] for t in mapp}
+ #    f = open("items.txt")
 
 def load_locations(filename):
     '''
     (str) -> dict
 
-    Read data from the file with the given filename and create
+    Read data from the
+    file with the given filename and create
     and return a dictionary with location data, structured as
     described in the assignment handout, Part 2 Section III.
     '''
