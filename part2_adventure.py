@@ -85,10 +85,18 @@ def load_items(filename):
     create and return a dictionary with item data, structured
     as described in the assignment handout, Part 2 Section III.
     '''
+    d = {}
+    f = open(filename,"r")
+    for line in f:
+        if not line.startswith("#"):
+            split = line.strip().split(",")
+            d[split[0]] = split[1:]
+    return d
+    # Change the last two strings of list of values to int,
+    # I dont know how to yet
+        
 
- #   d = {}
- #   {t[0]:t[1:] for t in mapp}
- #    f = open("items.txt")
+ 
 
 def load_locations(filename):
     '''
