@@ -88,16 +88,14 @@ def load_items(filename):
     d = {}
     f = open(filename,"r")
     for line in f:
-        if not line.startswith("#"):
-            split = line.strip().split(",")
-            d[split[0]] = split[1:]
-    return d
-    # Change the last two strings of list of values to int,
-    # I dont know how to yet
+        split = line.strip().split(",")
+        split[2] = float(split[2])
+        split[3] = float(split[3])
         
+        d[split[0]] = split[1:]
+    return d
 
- 
-
+        
 def load_locations(filename):
     '''
     (str) -> dict
@@ -128,9 +126,13 @@ def get_indices(lst, elm):
     >>> get_indices([[1, 3, 4], [5, 6, 7]], 7)
     (1, 2)
     '''
+    for i in range(len(lst)):
+        for x in range(len(lst[i])):
+            if lst[i][x] == elm:
+                return (i,x)
+
     
-    # YOUR CODE HERE #
-    pass
+    
 
 def update_map(map_visual, map_coors, player_id, px, py, dx, dy):
     '''
